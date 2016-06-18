@@ -1,0 +1,15 @@
+require "functions"
+
+hs.hotkey.bind({"shift", "ctrl"}, "l", moveLeft)
+hs.hotkey.bind({"shift", "ctrl"}, "h", moveRight)
+hs.hotkey.bind({"shift", "ctrl"}, "k", moveUp)
+hs.hotkey.bind({"shift", "ctrl"}, "j", moveDown)
+hs.hotkey.bind({"cmd", "shift", "ctrl"}, "h", resizeLeft)
+hs.hotkey.bind({"cmd", "shift", "ctrl"}, "l", resizeRight)
+hs.hotkey.bind({"cmd", "shift", "ctrl"}, "k", resizeUp)
+hs.hotkey.bind({"cmd", "shift", "ctrl"}, "j", resizeDown)
+hs.hotkey.bind({"cmd", "shift", "ctrl"}, "r", reloadConfig)
+hs.hotkey.bind({"cmd", "shift", "ctrl"}, "[", moveToPreviousDisplay)
+hs.hotkey.bind({"cmd", "shift", "ctrl"}, "]", moveToNextDisplay)
+hs.hotkey.bind({"cmd", "shift", "ctrl"}, "c", centralizeWindow)
+hs.hotkey.bind({"cmd", "shift", "ctrl"}, "f", centralizeWindow)
