@@ -1,5 +1,5 @@
 hs.window.animationDuration = 0
-pixelDifference = 100
+pixelDifference = 50
 menuBarInPixles = 23
 numberOfCells = 8
 
