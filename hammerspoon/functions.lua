@@ -104,10 +104,18 @@ function reloadConfig()
   hs.alert.show("Config reloaded")
 end
 
-function moveToPreviousDisplay()
+function moveWindowToWestDisplay()
   hs.window.focusedWindow():moveOneScreenWest()
 end
 
-function moveToNextDisplay()
+function moveWindowToEastDisplay()
   hs.window.focusedWindow():moveOneScreenEast()
+end
+
+function moveWindowToNorthDisplay()
+  hs.window.focusedWindow():moveOneScreenNorth()
+end
+
+function moveWindowToSouthDisplay()
+  hs.window.focusedWindow():moveOneScreenSouth()
 end
