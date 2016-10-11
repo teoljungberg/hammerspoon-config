@@ -62,9 +62,7 @@ end
 
 function fullScreenWindow()
   local window = getWindow()
-  local fullScreenWindow = window:setFullScreen():frame()
-
-  window:setFrame(fullScreenWindow)
+  window:maximize(0)
 end
 
 function moveLeft()
