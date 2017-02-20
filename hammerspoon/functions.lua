@@ -81,6 +81,34 @@ function moveDown()
   moveWindowY(pixelDifference)
 end
 
+function moveWindowLeftHalfScreen()
+  local window = getWindow()
+  local windowFrame = window:frame()
+  local screen = window:screen()
+  local max = screen:frame()
+
+  windowFrame.x = max.x
+  windowFrame.y = max.y
+  windowFrame.w = max.w / 2
+  windowFrame.h = max.h
+
+  window:setFrame(windowFrame)
+end
+
+function moveWindowRightHalfScreen()
+  local window = getWindow()
+  local windowFrame = window:frame()
+  local screen = window:screen()
+  local max = screen:frame()
+
+  windowFrame.x = max.x + (max.w / 2)
+  windowFrame.y = max.y
+  windowFrame.w = max.w / 2
+  windowFrame.h = max.h
+
+  window:setFrame(windowFrame)
+end
+
 function resizeLeft()
   resizeWindowX(-pixelDifference)
 end
