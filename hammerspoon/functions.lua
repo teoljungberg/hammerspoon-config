@@ -145,3 +145,58 @@ end
 function moveWindowToSouthDisplay()
   hs.window.focusedWindow():moveOneScreenSouth()
 end
+
+function hideAlreadyRunningApplication(bundleID)
+  local focus = hs.window.focusedWindow()
+
+  if focus and focus:application():bundleID() == bundleID then
+    focus:application():hide()
+    return true
+  else
+    return false
+  end
+end
+
+function activeRunningApplication(bundleID)
+  local running = hs.application.applicationsForBundleID(bundleID)
+
+  if #running > 0 and #running[1]:allWindows() > 0 then
+    running[1]:activate()
+    return true
+  else
+    return false
+  end
+end
+
+function launchApplication(bundleID)
+  hs.application.launchOrFocusByBundleID(bundleID)
+end
+
+function toggleApplication(bundleID)
+  return function()
+    if hideAlreadyRunningApplication(bundleID) then
+      return
+    elseif activeRunningApplication(bundleID) then
+      return
+    else
+      launchApplication(bundleID)
+    end
+  end
+end
+
+-- The bundle ID is fetched with the following AppleScript:
+--
+-- `osascript -e 'id of app "NAME OF APP"'`
+--
+applicationShortcutToBundleMapping = {
+  [0] = "net.kovidgoyal.kitty",
+  [1] = "com.brave.Browser",
+  [2] = "com.apple.mail",
+  [3] = "com.tinyspeck.slackmacgap",
+  [4] = "com.spotify.client",
+  [5] = nil,
+  [6] = nil,
+  [7] = nil,
+  [8] = nil,
+  [9] = "com.google.Chrome",
+}

@@ -17,3 +17,9 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "k", moveWindowToNorthDisplay)
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "j", moveWindowToSouthDisplay)
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "f", fullScreenWindow)
 hs.hotkey.bind({"cmd", "shift", "ctrl"}, "c", centralizeWindow)
+
+for key, bundleID in pairs(applicationShortcutToBundleMapping) do
+  if bundleID then
+    hs.hotkey.bind({"shift", "ctrl"}, tostring(key), toggleApplication(bundleID))
+  end
+end
