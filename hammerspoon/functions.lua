@@ -1,7 +1,7 @@
 hs.window.animationDuration = 0
-pixelDifference = 50
-menuBarInPixles = 23
-numberOfCells = 8
+local pixelDifference = 50
+local menuBarInPixles = 23
+local numberOfCells = 8
 
 function getWindow()
   local window = hs.window.focusedWindow()
