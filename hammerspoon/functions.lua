@@ -199,4 +199,5 @@ applicationShortcutToBundleMapping = {
   [7] = nil,
   [8] = nil,
   [9] = "com.google.Chrome",
+  ["m"] = "org.vim.MacVim",
 }
