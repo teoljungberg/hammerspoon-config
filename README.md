@@ -1,10 +1,5 @@
 # Hammerspoon Config
-## Setup
-I use [thoughtbot/rcm] to manage my configuration
 
-```sh
-% git clone git@github.com:teoljungberg/hammerspoon-config ~/src/hammerspoon-config
-% RCRC=./rcrc rcup
-```
+Migrated into [teoljungberg/dotfiles]
 
-[thoughtbot/rcm]: http://github.com/thoughtbot/rcm
+[teoljungberg/dotfiles]: https://github.com/teoljungberg/dotfiles

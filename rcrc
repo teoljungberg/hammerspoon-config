@@ -1,2 +1,0 @@
-EXCLUDES="README.md rcrc"
-DOTFILES_DIRS="$HOME/src/hammerspoon-config"
